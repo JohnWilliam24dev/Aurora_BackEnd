@@ -2,7 +2,9 @@ package com.duckers.aurora.Application
 
 import com.duckers.aurora.Model.ItemSimulacaoModel
 import com.duckers.aurora.repository.ItemSimulacaoRepository
+import org.springframework.stereotype.Service;
 
+@Service
 class ItemSimulacaoApplication {
     private val itemSimulacaoRepository: ItemSimulacaoRepository;
     constructor(itemSimulacaoRepository: ItemSimulacaoRepository){

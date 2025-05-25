@@ -2,7 +2,9 @@ package com.duckers.aurora.Application
 
 import com.duckers.aurora.Model.ClienteModel
 import com.duckers.aurora.repository.ClienteRepository
+import org.springframework.stereotype.Service;
 
+@Service
 class ClienteApplication {
     private val clienteRepository: ClienteRepository;
     constructor(clienteRepository: ClienteRepository){

@@ -3,7 +3,9 @@ package com.duckers.aurora.Application
 import com.duckers.aurora.Model.ItemCarrinhoModel
 import com.duckers.aurora.repository.ItemCarrinhoRepository
 
+import org.springframework.stereotype.Service;
 
+@Service
 class ItemCarrinhoApplication {
     private val itemCarrinhoRepository: ItemCarrinhoRepository;
     constructor(itemCarrinhoRepository: ItemCarrinhoRepository){
