@@ -2,7 +2,9 @@ package com.duckers.aurora.repository
 
 import com.duckers.aurora.Model.ProdutoModel
 import com.duckers.aurora.repository.JPA.ProdutoJPA
+import org.springframework.stereotype.Repository
 
+@Repository
 class ProdutoRepository {
     private val produtoJPA: ProdutoJPA;
     constructor(produtoJPA: ProdutoJPA){

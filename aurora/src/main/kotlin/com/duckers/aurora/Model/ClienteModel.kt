@@ -22,7 +22,8 @@ open class ClienteModel {
      var carrinhoModel: CarrinhoModel? = null
 
     @OneToMany(mappedBy = "cliente", cascade = [CascadeType.PERSIST], orphanRemoval = true)
-     var enderecos: List<EnderecoModel> = mutableListOf()
+    var enderecos: MutableList<EnderecoModel> = ArrayList()
+
 
     constructor()
 
