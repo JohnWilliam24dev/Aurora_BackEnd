@@ -17,6 +17,9 @@ class FuncionarioApplication {
     fun getFuncionarioById(id:Long): FuncionarioModel {
         return funcionarioRepository.getFuncionarioById(id)
     }
+    fun getFuncionarioByCPF(cpf: String):FuncionarioModel?{
+        return funcionarioRepository.findByCPF(cpf)
+    }
     fun getAllFuncionario(): List<FuncionarioModel>{
         return funcionarioRepository.getAllFuncionario()
     }

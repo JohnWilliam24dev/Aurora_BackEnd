@@ -4,4 +4,5 @@ import com.duckers.aurora.Model.ClienteModel
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface ClienteJPA: JpaRepository<ClienteModel,Long> {
+    fun findByEmail(email: String): ClienteModel?
 }

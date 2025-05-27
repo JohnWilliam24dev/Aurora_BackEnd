@@ -20,6 +20,8 @@ open class FuncionarioModel {
 
     @Column(nullable = false)
      var senha: String = ""
+    @Column(nullable = false)
+    var cpf: String= ""
 
     @Enumerated(EnumType.STRING)
      var cargo: Cargo = Cargo.GERENCIADOR_ROUPAS
@@ -28,16 +30,14 @@ open class FuncionarioModel {
 
     constructor()
 
-    constructor(nomeCompleto: String, email: String, senha: String, cargo: Cargo) {
+    constructor(nomeCompleto: String, email: String, senha: String, cpf: String, cargo: Cargo) {
         this.nomeCompleto = nomeCompleto
         this.email = email
         this.senha = senha
+        this.cpf=cpf
         this.cargo = cargo
     }
 
-    enum class Cargo {
-        ADMINISTRADOR_GERAL, GERENCIADOR_FUNCIONARIOS, GERENCIADOR_ROUPAS
-    }
 
     // getters e setters...
 }
