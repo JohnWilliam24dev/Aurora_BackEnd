@@ -19,7 +19,8 @@ open class CarrinhoModel {
      var valorTotal: BigDecimal = BigDecimal.ZERO
 
     @OneToMany(mappedBy = "carrinho", cascade = [CascadeType.PERSIST, CascadeType.MERGE], orphanRemoval = true)
-     var itens: List<ItemCarrinhoModel> = mutableListOf()
+    var itens: MutableList<ItemCarrinhoModel> = ArrayList()
+
 
     constructor()
 

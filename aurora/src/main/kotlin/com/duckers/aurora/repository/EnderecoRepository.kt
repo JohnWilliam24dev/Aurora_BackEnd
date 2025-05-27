@@ -2,7 +2,9 @@ package com.duckers.aurora.repository
 
 import com.duckers.aurora.Model.EnderecoModel
 import com.duckers.aurora.repository.JPA.EnderecoJPA
+import org.springframework.stereotype.Repository
 
+@Repository
 class EnderecoRepository {
     private val enderecoJPA: EnderecoJPA;
     constructor(enderecoJPA: EnderecoJPA){

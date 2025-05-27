@@ -2,7 +2,9 @@ package com.duckers.aurora.repository
 
 import com.duckers.aurora.Model.SimulacaoCompraModel
 import com.duckers.aurora.repository.JPA.SimulacaoCompraJPA
+import org.springframework.stereotype.Repository
 
+@Repository
 class SimulacaoCompraRepository {
     private val simulacaoCompraJPA: SimulacaoCompraJPA;
     constructor(simulacaoCompraJPA: SimulacaoCompraJPA){

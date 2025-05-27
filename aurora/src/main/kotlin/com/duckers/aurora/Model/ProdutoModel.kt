@@ -23,7 +23,7 @@ open class ProdutoModel {
     @ElementCollection
     @CollectionTable(name = "produto_imagens", joinColumns = [JoinColumn(name = "produto_id")])
     @Column(name = "url")
-     var imagens: List<String> = mutableListOf()
+     var imagens: List<String> = ArrayList()
 
     constructor()
 

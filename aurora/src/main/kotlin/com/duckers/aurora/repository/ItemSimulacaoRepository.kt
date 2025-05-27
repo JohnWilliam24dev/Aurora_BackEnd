@@ -2,7 +2,9 @@ package com.duckers.aurora.repository
 
 import com.duckers.aurora.Model.ItemSimulacaoModel
 import com.duckers.aurora.repository.JPA.ItemSimulacaoJPA
+import org.springframework.stereotype.Repository
 
+@Repository
 class ItemSimulacaoRepository {
     private val itemSimulacaoJPA: ItemSimulacaoJPA;
     constructor(itemSimulacaoJPA: ItemSimulacaoJPA){

@@ -2,7 +2,9 @@ package com.duckers.aurora.repository
 
 import com.duckers.aurora.Model.FuncionarioModel
 import com.duckers.aurora.repository.JPA.FuncionarioJPA
+import org.springframework.stereotype.Repository
 
+@Repository
 class FuncionarioRepository {
     private val funcionarioJPA: FuncionarioJPA;
     constructor(funcionarioJPA: FuncionarioJPA){

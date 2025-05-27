@@ -24,7 +24,8 @@ open class SimulacaoCompraModel {
      var endereco: EnderecoModel? = null
 
     @OneToMany(mappedBy = "simulacao", cascade = [CascadeType.PERSIST], orphanRemoval = true)
-     var itens: List<ItemSimulacaoModel> = mutableListOf()
+    var itens: MutableList<ItemSimulacaoModel> = ArrayList()
+
 
     constructor()
 

@@ -2,7 +2,9 @@ package com.duckers.aurora.repository
 
 import com.duckers.aurora.Model.ItemCarrinhoModel
 import com.duckers.aurora.repository.JPA.ItemCarrinhoJPA
+import org.springframework.stereotype.Repository
 
+@Repository
 class ItemCarrinhoRepository {
     private val itemCarrinhoJPA: ItemCarrinhoJPA;
     constructor(itemCarrinhoJPA: ItemCarrinhoJPA){

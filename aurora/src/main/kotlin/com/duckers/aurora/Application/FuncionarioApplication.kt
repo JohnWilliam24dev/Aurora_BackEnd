@@ -2,7 +2,9 @@ package com.duckers.aurora.Application
 
 import com.duckers.aurora.Model.FuncionarioModel
 import com.duckers.aurora.repository.FuncionarioRepository
+import org.springframework.stereotype.Service;
 
+@Service
 class FuncionarioApplication {
     private val funcionarioRepository: FuncionarioRepository;
     constructor(funcionarioRepository: FuncionarioRepository){
