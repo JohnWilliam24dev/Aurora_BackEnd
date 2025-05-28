@@ -20,6 +20,10 @@ class ClienteController(
     fun getClienteById(@PathVariable id: Long): ClienteModel {
         return clienteApplication.getClienteById(id)
     }
+    @GetMapping("/email/{email}")
+    fun getClienteByEmail(@PathVariable email: String): ClienteModel?{
+        return clienteApplication.getClienteByEmail(email)
+    }
 
     @GetMapping
     fun getAllClientes(): List<ClienteModel> {

@@ -21,6 +21,11 @@ class FuncionarioController(
         return funcionarioApplication.getFuncionarioById(id)
     }
 
+    @GetMapping("/cpf/{cpf}")
+    fun getFuncionarioByCPF(@PathVariable cpf: String): FuncionarioModel? {
+        return funcionarioApplication.getFuncionarioByCPF(cpf)
+    }
+
     @GetMapping
     fun getAllFuncionarios(): List<FuncionarioModel> {
         return funcionarioApplication.getAllFuncionario()

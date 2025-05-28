@@ -17,6 +17,9 @@ class ClienteApplication {
     fun getClienteById(id:Long): ClienteModel {
         return clienteRepository.getClienteById(id)
     }
+    fun getClienteByEmail(email: String): ClienteModel? {
+        return clienteRepository.getClienteByEmail(email)
+    }
     fun getAllCliente(): List<ClienteModel>{
         return clienteRepository.getAllCliente()
     }

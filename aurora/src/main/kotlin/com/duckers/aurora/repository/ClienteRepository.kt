@@ -20,6 +20,10 @@ class ClienteRepository {
     fun getAllCliente(): List<ClienteModel>{
         return clienteJPA.findAll()
     }
+
+    fun getClienteByEmail(email: String): ClienteModel? {
+        return clienteJPA.findByEmail(email)
+    }
     fun updateCliente(clienteModel: ClienteModel){
         clienteJPA.save(clienteModel)
     }

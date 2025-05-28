@@ -14,6 +14,9 @@ class FuncionarioRepository {
         funcionarioJPA.save(funcionarioModel)
 
     }
+    fun findByCPF(cpf: String): FuncionarioModel?{
+        return funcionarioJPA.findByCpf(cpf)
+    }
     fun getFuncionarioById(id:Long): FuncionarioModel {
         return funcionarioJPA.findById(id).get()
     }
