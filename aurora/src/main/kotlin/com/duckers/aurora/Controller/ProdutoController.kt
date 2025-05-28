@@ -2,8 +2,11 @@ package com.duckers.aurora.Controller
 
 import com.duckers.aurora.Application.ProdutoApplication
 import com.duckers.aurora.Model.ProdutoModel
+import org.springframework.http.ResponseEntity
 
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.multipart.MultipartFile
+import java.awt.Image
 
 @RestController
 @RequestMapping("/produto")
