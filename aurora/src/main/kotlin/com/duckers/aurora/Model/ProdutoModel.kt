@@ -1,7 +1,7 @@
 package com.duckers.aurora.Model
+
 import jakarta.persistence.*
 import java.math.BigDecimal
-import java.time.LocalDate
 
 @Entity
 @Table(name = "produtos")
@@ -10,20 +10,20 @@ open class ProdutoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "produto_id")
-     var id: Long? = null
+    var id: Long? = null
 
-     var nome: String = ""
-     var descricao: String? = null
+    var nome: String = ""
+    var descricao: String? = null
 
     @Column(name = "preco_unitario")
-     var precoUnitario: BigDecimal = BigDecimal.ZERO
+    var precoUnitario: BigDecimal = BigDecimal.ZERO
 
-     var categoria: String = ""
+    var caminhoImagem: String? = null
 
-    @ElementCollection
-    @CollectionTable(name = "produto_imagens", joinColumns = [JoinColumn(name = "produto_id")])
-    @Column(name = "url")
-     var imagens: List<String> = ArrayList()
+    @Transient
+    var imagem: ByteArray? = null
+
+    var categoria: String = ""
 
     constructor()
 
@@ -32,6 +32,4 @@ open class ProdutoModel {
         this.precoUnitario = precoUnitario
         this.categoria = categoria
     }
-
-    // getters e setters...
 }
