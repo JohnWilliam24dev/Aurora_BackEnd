@@ -2,6 +2,7 @@ package com.duckers.aurora.Controller
 
 import com.duckers.aurora.Application.ClienteApplication
 import com.duckers.aurora.Model.ClienteModel
+import org.springframework.http.ResponseEntity
 
 import org.springframework.web.bind.annotation.*
 
@@ -12,8 +13,9 @@ class ClienteController(
 ) {
 
     @PostMapping
-    fun createCliente(@RequestBody cliente: ClienteModel) {
+    fun createCliente(@RequestBody cliente: ClienteModel) : ResponseEntity<Void>{
         clienteApplication.createCliente(cliente)
+        return ResponseEntity.ok().build()
     }
 
     @GetMapping("/{id}")
