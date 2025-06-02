@@ -13,6 +13,8 @@ open class ProdutoModel {
     var id: Long? = null
 
     var nome: String = ""
+
+    @Column(length = 1000)
     var descricao: String? = null
 
     @Column(name = "preco_unitario")
