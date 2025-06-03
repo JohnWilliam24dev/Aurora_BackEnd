@@ -13,8 +13,11 @@ class ProdutoApplication(
 
     fun createProduto(produtoModel: ProdutoModel) {
 
-        produtoRepository.createProduto(produtoModel)
+        produtoModel.tamanhos.forEach {
+            it.produto = produtoModel
+        }
 
+        produtoRepository.createProduto(produtoModel)
 
         val id = produtoModel.id
         if (id != null && produtoModel.imagem != null) {
