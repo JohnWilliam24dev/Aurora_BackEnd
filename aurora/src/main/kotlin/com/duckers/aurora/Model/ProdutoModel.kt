@@ -25,6 +25,9 @@ open class ProdutoModel {
 
     var categoria: String = ""
 
+    @OneToMany(mappedBy = "produto", cascade = [CascadeType.ALL], orphanRemoval = true)
+    var tamanhos: MutableList<ProdutoTamanhoModel> = mutableListOf()
+
     constructor()
 
     constructor(nome: String, precoUnitario: BigDecimal, categoria: String) {
