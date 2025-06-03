@@ -15,6 +15,7 @@ class ProdutoTamanhoApplication(
     fun adicionarTamanho(produtoId: Long, tamanhoModel: ProdutoTamanhoModel) {
         val produto = produtoRepository.getProdutoById(produtoId)
         tamanhoModel.produto = produto
+
         produtoTamanhoRepository.create(tamanhoModel)
     }
 
