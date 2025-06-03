@@ -56,6 +56,11 @@ class ProdutoApplication(
     fun updateProduto(produtoModel: ProdutoModel) {
         val id = produtoModel.id
 
+        // ✅ Garante que cada tamanho aponte pro produto
+        produtoModel.tamanhos.forEach {
+            it.produto = produtoModel
+        }
+
         if (id != null && produtoModel.imagem != null) {
             val caminho = imagemService.atualizarImagemBytes(id, produtoModel.imagem!!)
             produtoModel.caminhoImagem = caminho
@@ -63,6 +68,7 @@ class ProdutoApplication(
 
         produtoRepository.updateProduto(produtoModel)
     }
+
 
     fun deleteProduto(id: Long) {
 
